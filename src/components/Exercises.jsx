@@ -6,17 +6,17 @@ import ExerciseCard from "./ExerciseCard";
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
   console.log(exercises);
-  const exercisesPerPage = 9;
-  const indexOfLastExercise = currentPage * exercisesPerPage;
-  const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
-  const currentExercises = exercises.slice(
-    indexOfFirstExercise,
-    indexOfLastExercise
-  );
-  const paginate = (e, value) => {
-    setCurrentPage(value);
-    window.scrollTo({ top: 1800, behavior: "smooth" });
-  };
+  // const exercisesPerPage = 9;
+  // const indexOfLastExercise = currentPage * exercisesPerPage;
+  // const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
+  // const currentExercises = exercises.slice(
+  //   indexOfFirstExercise,
+  //   indexOfLastExercise
+  // );
+  // const paginate = (e, value) => {
+  //   setCurrentPage(value);
+  //   window.scrollTo({ top: 1800, behavior: "smooth" });
+  // };
 
   useEffect(() => {
     const fetchExercisesData = async () => {
@@ -47,11 +47,11 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         flexWrap="wrap"
         justifyContent="center"
       >
-        {currentExercises.map((exercise, index) => (
+        {exercises.map((exercise, index) => (
           <ExerciseCard key={index} exercise={exercise} />
         ))}
       </Stack>
-      <Stack mt="100px" alignItems="center">
+      {/* <Stack mt="100px" alignItems="center">
         {exercises.length > 9 && (
           <Pagination
             color="standard"
@@ -62,7 +62,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
             onChange={paginate}
           />
         )}
-      </Stack>
+      </Stack> */}
     </Box>
   );
 };
