@@ -28,7 +28,7 @@ const Detail = ({ exerciseDetail }) => {
       <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
       <Stack sx={{ gap: { lg: "35px", sx: "20px" } }}>
         <Typography variant="h3">{name}</Typography>{" "}
-        <Typography varian="h6">
+        <Typography varian="h6" mb="40px">
           Exercises keep you strong. {name} {` `}
           is one of the best exercises to target your {target}. It will help you
           improve your mood and gain energy

@@ -11,6 +11,7 @@ const SimilarExercises = ({ equipmentMuscleExer, targetMuscleExer }) => {
         fontWeight={700}
         color="#000"
         mb="33px"
+        mt="33px"
       >
         Similar{" "}
         <span style={{ color: "#FF2625", textTransform: "capitalize" }}>
