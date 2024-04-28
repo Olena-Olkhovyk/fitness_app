@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Stack, Button } from "@mui/material";
+import { Typography, Stack, Button, Box } from "@mui/material";
 import bodyPartImage from "../assets/icons/body-part.png";
 import TargetImage from "../assets/icons/target.png";
 import EquipmentImage from "../assets/icons/equipment.png";
@@ -24,7 +24,7 @@ const Detail = ({ exerciseDetail }) => {
     <Stack
       gap="60px"
       mt="60px"
-      sx={{ flexDirection: { lg: "row" }, p: "20px", alignItems: "center" }}
+      sx={{ flexDirection: { lg: "row" }, p: "20px" }}
     >
       <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
       <Stack sx={{ gap: { lg: "35px", sx: "20px" } }}>
@@ -35,7 +35,13 @@ const Detail = ({ exerciseDetail }) => {
           improve your mood and gain energy
         </Typography>
         {extraDetail.map((item) => (
-          <Stack key={item.name} direction="row" gap="24px" alignItems="center">
+          <Stack
+            key={item.name}
+            direction="row"
+            gap="24px"
+            alignItems="center"
+            sx={{ pb: { lg: "5px", xs: "30px" } }}
+          >
             <Button
               sx={{
                 background: "#fff2db",
