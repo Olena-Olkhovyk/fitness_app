@@ -9,7 +9,11 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
 
   return (
     <Box sx={{ marginTop: { lg: "200px", xs: "20px" } }} p="20px">
-      <Typography variant="h3" mb="33px">
+      <Typography
+        variant="h3"
+        mb="33px"
+        sx={{ fontSize: { lg: "44px", xs: "30px" } }}
+      >
         Watch{" "}
         <span style={{ color: "#ff2625", textTransform: "capitalize" }}>
           {name}
@@ -32,13 +36,25 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
           >
             <img src={item.video.thumbnails[0].url} alt={item.title} />
             <Box>
-              <Typography variant="h5" color="#000">
+              <Typography
+                variant="h5"
+                color="#000"
+                sx={{ fontSize: { lg: "35px", xs: "20px" } }}
+              >
                 {item.video.name}
               </Typography>
-              <Typography variant="h5" color="#000">
+              <Typography
+                variant="h5"
+                color="#000"
+                sx={{ fontSize: { lg: "35px", xs: "22px" } }}
+              >
                 {item.video.title}
               </Typography>
-              <Typography variant="h5" color="#000">
+              <Typography
+                variant="h5"
+                color="grey"
+                sx={{ fontSize: { lg: "30px", xs: "22px" } }}
+              >
                 {item.video.channelName}
               </Typography>
             </Box>
