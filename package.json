@@ -1,5 +1,6 @@
 {
   "name": "fitness_app",
+  "homepage": "https://fitness-app-psi-lemon.vercel.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
